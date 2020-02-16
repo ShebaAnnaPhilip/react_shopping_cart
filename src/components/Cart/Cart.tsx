@@ -13,6 +13,7 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
                <label className="cproduct-total">Total</label>
                <label></label>
            </div>
+
            {Items.length >0 &&
            <div>
                {Items.map(item => 
@@ -26,6 +27,11 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
                )}
            </div>
            }
+
+           <div>
+               <label>Grand Total</label>
+               <div>{Items.reduce((a,c) => a + c.price * c.count, 0)}</div>
+           </div>
         </div>
     )
 }
