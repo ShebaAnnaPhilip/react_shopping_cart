@@ -28,9 +28,9 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
            </div>
            }
 
-           <div>
+           <div className="grandtotal">
                <label>Grand Total</label>
-               <div>{Items.reduce((a,c) => a + c.price * c.count, 0)}</div>
+               <div className="total">$ {Items.reduce((a,c) => a + c.price * c.count, 0)}</div>
            </div>
         </div>
     )
