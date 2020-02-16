@@ -1,0 +1,29 @@
+.container {
+    background: linear-gradient(#ffffff,#ffffff,#ffffff,#ffffff,#6dd5ed,#6dd5ed,#2193b0);
+    padding: 7px 32px;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.033);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    max-width:100%;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 15%;
+    }
+.logo {
+    padding-top: 10px;
+    height: 30px;
+}
+.cart {
+  display: flex;
+  margin-left: 64px;
+  position: relative;
+  z-index: 99;
+  left: 75%;
+}
+.icon {
+  height: 30px;
+  padding-top: 10px;
+}
