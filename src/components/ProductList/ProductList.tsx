@@ -9,7 +9,7 @@ const ProductList = (props:any) => {
         <div className="wrapper">{
             products.map((name:any,i:any)=>{
                 return(
-                    <Product key={i} name={products[i].name} price={products[i].price}/>
+                    <Product key={i} id={products[i].id} name={products[i].name} price={products[i].price}/>
                 )
 
             })
