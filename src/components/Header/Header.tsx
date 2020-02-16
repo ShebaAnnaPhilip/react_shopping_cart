@@ -3,7 +3,7 @@ import './Header.scss'
 import Cart from '../Cart/Cart';
 
 
-const Header =() =>{
+const Header =({cartItems}:any) =>{
     const [isCartOpen, toggleCart] = useState(false);
     const handleClickCart = () => toggleCart(!isCartOpen);
     return (
@@ -14,7 +14,7 @@ const Header =() =>{
                     <img className="icon" src='/assets/carticon.png' alt="Cart" onClick={handleClickCart}/>
                 </a>
                 <div className={isCartOpen?"cart-status open":"cart-status"}>
-                    <Cart/>
+                    <Cart cartItems={cartItems}/>
                 </div>
             </div>
 

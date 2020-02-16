@@ -10,11 +10,11 @@ class App extends Component  {
   }
 
   state = {
-    addedCartItems : []
+    CartItems : []
   }
 
   handleAddToCart=(product:any)=>{
-    const cartItems: any[] = this.state.addedCartItems;
+    const cartItems: any[] = this.state.CartItems;
     let productInCart = false;
     cartItems.forEach(item => {
       if(item.id === product.id){
@@ -26,16 +26,13 @@ class App extends Component  {
     if(!productInCart){
         cartItems.push({...product, count:1})
     }
-    this.setState({addedCartItems : cartItems})
-
-    console.log(cartItems);
-
+    this.setState({CartItems : cartItems})
   }
 
   render(){
     return(
       <div>
-        <Header/>
+        <Header cartItems={this.state.CartItems}/>
         <ProductList products={products} handleAddToCart={this.handleAddToCart}/>
       </div>
     )
