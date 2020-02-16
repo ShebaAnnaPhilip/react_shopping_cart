@@ -23,5 +23,26 @@ export const products = [
     id: "5",
     name: "School Bags",
     price: 19.45
+  },
+  {
+    id: "6",
+    name: "Baby Cot",
+    price: 190
+  },
+  {
+    id: "7",
+    name: "Solar Study Lamp",
+    price: 20
+  },
+  {
+    id: "8",
+    name: "Warm Blankets",
+    price: 33.50
+  },
+  {
+    id: "9",
+    name: "Winter Clothes",
+    price: 28.60
   }
+
 ];

@@ -37,7 +37,7 @@ class App extends Component  {
 
   render(){
     return(
-      <div>
+      <div className="main">
         <Header cartItems={this.state.CartItems} handleRemoveItem={this.handleRemoveItem} />
         <ProductList products={products} handleAddToCart={this.handleAddToCart}/>
       </div>
