@@ -1,11 +1,15 @@
 import React from 'react'
+import './Product.scss'
 
 const Product=(props:any)=> {
     return (
-        <div>
+        <div className="product">
             <img src={`/images/${props.id}.jpg`} alt="productImage"/>
-            <p>{props.name}</p>
-            <p>{props.price}</p>
+            <p className="product-name">{props.name}</p>
+            <p className="product-price">{props.price}</p>
+            <div className="add-cart-btn">
+                <button >Add to Cart</button>
+            </div>
         </div>
     )
 }
