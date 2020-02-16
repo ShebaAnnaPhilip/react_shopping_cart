@@ -21,7 +21,7 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
                        <div className="cproduct-name">{item.name}</div>
                        <div className="cproduct-price">{item.price}</div>
                        <div className="cproduct-quantity">{item.count}</div>
-                       <div className="cproduct-total">{item.price *item.count}</div>
+                       <div className="cproduct-total">$ {Number(item.price *item.count).toFixed(2)}</div>
                        <div className="cproduct-remove" onClick={()=>handleRemoveItem(item)}>x</div>
                    </div>
                )}
@@ -30,7 +30,7 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
 
            <div className="grandtotal">
                <label>Grand Total</label>
-               <div className="total">$ {Items.reduce((a,c) => a + c.price * c.count, 0)}</div>
+               <div className="total">$ {Number(Items.reduce((a,c) => a + c.price * c.count, 0)).toFixed(2)}</div>
            </div>
         </div>
     )
