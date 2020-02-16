@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.scss'
+import Cart from '../Cart/Cart';
 
 
 const Header =() =>{
@@ -10,6 +11,9 @@ const Header =() =>{
                 <a  href="#">
                     <img className="icon" src='/assets/carticon.png' alt="Cart" />
                 </a>
+                <div className="cart-status">
+                    <Cart/>
+                </div>
             </div>
 
         </div>
