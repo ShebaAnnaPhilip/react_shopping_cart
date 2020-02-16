@@ -5,8 +5,14 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
     const Items:any[] = cartItems;
     return (
       <div>
-        <div>Cart is empty</div>
+        {cartItems.length === 0 && (
+            <div>
+                <img src='/assets/emptycart.png' className="empty-cart" alt="Empty Cart" />
+            </div>
+        )}
+        {cartItems.length>0 && (
         <div>
+          <h4>{`You have ${cartItems.length} item in the cart`}</h4>
           <div className="cart-label-row">
             <label className="cproduct-name">Product</label>
             <label className="cproduct-price">Price</label>
@@ -15,7 +21,6 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
             <label></label>
           </div>
 
-          {Items.length > 0 && (
             <div>
               {Items.map(item => (
                 <div className="cart-product-row">
@@ -34,7 +39,6 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
                 </div>
               ))}
             </div>
-          )}
 
           <div className="grandtotal">
             <label>Grand Total</label>
@@ -45,7 +49,7 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
               )}
             </div>
           </div>
-        </div>
+        </div>)}
       </div>
     );
 }
