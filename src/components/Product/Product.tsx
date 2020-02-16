@@ -8,7 +8,7 @@ const Product=(props:any)=> {
             <p className="product-name">{props.name}</p>
             <p className="product-price">{props.price}</p>
             <div className="add-cart-btn">
-                <button >Add to Cart</button>
+                <button onClick={()=>props.handleAddToCart(props)}>Add to Cart</button>
             </div>
         </div>
     )
