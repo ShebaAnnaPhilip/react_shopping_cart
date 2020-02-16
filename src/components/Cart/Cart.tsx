@@ -21,7 +21,7 @@ const Cart = ({cartItems}:any) => {
                        <div className="cproduct-price">{item.price}</div>
                        <div className="cproduct-quantity">{item.count}</div>
                        <div className="cproduct-total">{item.price *item.count}</div>
-                       <div><a href="#">x</a></div>
+                       <div className="cproduct-remove">x</div>
                    </div>
                )}
            </div>
