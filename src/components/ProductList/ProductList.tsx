@@ -1,14 +1,19 @@
 import React from 'react'
 import Product from '../Product/Product'
 import './ProductList.scss'
-import {products} from '../../constants/index';
+import { products } from '../../constants'
 
-function ProductList() {
+const ProductList = (props:any) => {
+    const {products} = props;
     return (
-        <div className="wrapper">
-            <Product name={products[0].name} price={products[0].price}/>
-            <Product name={products[0].name} price={products[0].price}/>
-            <Product name={products[0].name} price={products[0].price}/>
+        <div className="wrapper">{
+            products.map((name:any,i:any)=>{
+                return(
+                    <Product key={i} name={products[i].name} price={products[i].price}/>
+                )
+
+            })
+        }
         </div>
     )
 }
