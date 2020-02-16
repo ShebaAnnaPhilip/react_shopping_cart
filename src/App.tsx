@@ -1,22 +1,19 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import './App.scss';
 
-const App = () => {
-  return (
-    <div className="App">
-      <p>
-        Welcome to the UNICEF front end test
-        <span aria-label="hand-wave" role="img">
-          👋
-        </span>
-      </p>
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <p>Products</p>
-      <p>Cart</p>
-    </div>
-  );
+class App extends Component  {
+  constructor(props:any){
+    super(props);
+  }
+
+  render(){
+    return(
+      <div>
+        
+      </div>
+    )
+
+  }
 };
 
 export default App;
