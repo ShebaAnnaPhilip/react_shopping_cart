@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cart.scss'
 
-const Cart = ({cartItems}:any) => {
+const Cart = ({cartItems, handleRemoveItem}:any) => {
     const Items:any[] = cartItems;
     return (
         <div>
@@ -21,7 +21,7 @@ const Cart = ({cartItems}:any) => {
                        <div className="cproduct-price">{item.price}</div>
                        <div className="cproduct-quantity">{item.count}</div>
                        <div className="cproduct-total">{item.price *item.count}</div>
-                       <div className="cproduct-remove">x</div>
+                       <div className="cproduct-remove" onClick={()=>handleRemoveItem(item)}>x</div>
                    </div>
                )}
            </div>

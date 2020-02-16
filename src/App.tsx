@@ -26,13 +26,19 @@ class App extends Component  {
     if(!productInCart){
         cartItems.push({...product, count:1})
     }
-    this.setState({CartItems : cartItems})
+    this.setState({CartItems : cartItems});
+  }
+
+  handleRemoveItem = (item:any) => {
+    const cartItems:any[] = this.state.CartItems;
+    let filteredCart = cartItems.filter(cartitem => cartitem.id !== item.id)
+    this.setState({CartItems : filteredCart});
   }
 
   render(){
     return(
       <div>
-        <Header cartItems={this.state.CartItems}/>
+        <Header cartItems={this.state.CartItems} handleRemoveItem={this.handleRemoveItem} />
         <ProductList products={products} handleAddToCart={this.handleAddToCart}/>
       </div>
     )
