@@ -1,9 +1,20 @@
 .product {
     margin: 16px;
-    width: 300px;
+    width: 250px;
     border-radius: 2px;
     .product-image {
-      max-height: 150px;
+      max-width: 250px;
+      max-height: 200px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        cursor: zoom-in;
+        transition: transform 300ms ease-in;
+        transform: scale(1);
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
     .product-name {
       font-size: 24px;
@@ -11,24 +22,35 @@
     }
     .product-price {
       font-size: 16px;
-      font-weight: normal;
+      font-weight: bold;
       &:before {
         content: "$";
       }
     }
     .product-name,
     .product-price {
+      font-family: sans-serif;
+      color: #5b676d;
       padding: 0 16px;
       text-align: center;
     }
     .add-cart-btn {
       display: flex;
       justify-content: space-evenly;
+      padding-bottom: 20px;
       button {
-        background-color: rgb(179, 216, 233);
+        background-color: #19F;
+        background-image: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%,hsla(0, 0%, 0%, 0.3) 50%, 
+        hsla(0, 0%, 100%, 0.2));
+        color: white;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 14px;
         height: 40px;
         width: 50%;
         border: 0px;
+        cursor: pointer;
+        border-radius: 50px;
       }
     }
     &:hover {
