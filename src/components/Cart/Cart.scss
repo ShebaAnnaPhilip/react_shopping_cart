@@ -1,6 +1,11 @@
-.cart-column{
+.cart-label-row {
     padding-bottom: 30px;
     border-bottom: 1px solid #0c3f5c ;
     display: flex;
-    justify-content: space-around;
+    padding-left: 15px;
 }
+.cart-product-row {display:flex; margin: 10px 0px 10px 15px;}
+.cproduct-name {width: 40%;}
+.cproduct-price {width: 15% ;}
+.cproduct-quantity {width:15%;}
+.cproduct-total {width: 15%;float: right;}
