@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './Cart.scss'
 
 const Cart = () => {
     return (
         <div>
            <h4>Cart is empty</h4> 
-           <div>
+           <div className="cart-column">
                <label>Product</label>
                <label>Price</label>
                <label>Qty</label>
