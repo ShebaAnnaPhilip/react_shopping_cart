@@ -1,5 +1,31 @@
+body {
+    font-family: Roboto;
+    font-size: 16px;
+    color: slategray;
+    background: whitesmoke;
+  }
 .main:after {
     content: "";
     display: table;
     clear: both;
 }
+button {
+    background-color: #19F;
+    background-image: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%,hsla(0, 0%, 0%, 0.3) 50%, 
+    hsla(0, 0%, 100%, 0.2));
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    height: 40px;
+    width: 50%;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 50px;
+    outline: none;
+    transform-origin: center bottom 0px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    &:active {
+        transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+      }
+  }
+  

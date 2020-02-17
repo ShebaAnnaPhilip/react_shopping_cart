@@ -49,7 +49,13 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
               )}
             </div>
           </div>
+
+          <div className="checkoutbtn">
+            <button>Proceed to Checkout</button>
+          </div>
+          
         </div>)}
+
       </div>
     );
 }

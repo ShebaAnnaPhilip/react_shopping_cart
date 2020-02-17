@@ -25,7 +25,7 @@ const Header =({cartItems, handleRemoveItem}:any) =>{
             <img src='/assets/logo.png' className="logo" data-test-id="logo" alt="Logo"/>
             <div className="cart">
                 <div ref={iconRef}>
-                    <div className="circle">{cartItems.length}</div>
+                    <div className="circle">{cartItems && cartItems.length}</div>
                     <img className="icon" data-test-id="icon" src='/assets/carticon.png' alt="Cart"  onClick={handleClickCart}/>
                 </div>
                 <div ref={myRef} className={isCartOpen?"cart-status open":"cart-status"}>

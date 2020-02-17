@@ -26,7 +26,8 @@
 .grandtotal {
     display: flex;
     float: right;
-    margin: 50px 50px 0px 0px;
+    margin: 10px 70px 0px 0px;
+    font-weight: bold;
     .total{
         margin-left: 50px;
     }
@@ -37,4 +38,10 @@
     display: flex;
     padding: 70px 10px 70px 10px
     
+}
+.checkoutbtn {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
