@@ -9,7 +9,6 @@
     display: flex;
     max-width:100%;
     margin: 0 auto;
-    padding: 0 32px;
     height: 15%;
     }
 .logo {
@@ -27,6 +26,7 @@
   height: 30px;
   padding-top: 10px;
   position: fixed;
+  cursor: pointer;
 }
 
 .cart-status {
@@ -57,4 +57,5 @@
   align-items: flex-end;
   position: absolute;
   z-index: 99;
+  cursor: pointer;
 }

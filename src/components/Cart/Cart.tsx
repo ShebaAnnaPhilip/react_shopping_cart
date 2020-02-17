@@ -25,7 +25,7 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
               {Items.map((item,i)=> (
                 <div key={i} className="cart-product-row">
                   <div className="cproduct-name">{item.name}</div>
-                  <div className="cproduct-price">{item.price}</div>
+                  <div className="cproduct-price">$ {item.price}</div>
                   <div className="cproduct-quantity">{item.count}</div>
                   <div className="cproduct-total">
                     $ {Number(item.price * item.count).toFixed(2)}
