@@ -11,8 +11,8 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
             </div>
         )}
         {cartItems.length>0 && (
-        <div>
-          <h4>{`You have ${cartItems.length} item in the cart`}</h4>
+        <div className="scroll">
+          <p className="cart-p">{`You have ${cartItems.length} item in the cart`}</p>
           <div className="cart-label-row">
             <label className="cproduct-name">Product</label>
             <label className="cproduct-price">Price</label>
