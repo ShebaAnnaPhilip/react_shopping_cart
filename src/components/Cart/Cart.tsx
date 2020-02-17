@@ -5,13 +5,13 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
     const Items:any[] = cartItems;
     return (
       <div>
-        {cartItems.length === 0 && (
-            <div>
+        {Items && Items.length === 0 && (
+            <div data-test-id="emptycart">
                 <img src='/assets/emptycart.png' className="empty-cart" alt="Empty Cart" />
             </div>
         )}
-        {cartItems.length>0 && (
-        <div className="scroll">
+        {Items && Items.length>0 && (
+        <div className="scroll" data-test-id="cartview">
           <p className="cart-p">{`You have ${cartItems.length} item in the cart`}</p>
           <div className="cart-label-row">
             <label className="cproduct-name">Product</label>
@@ -22,8 +22,8 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
           </div>
 
             <div>
-              {Items.map(item => (
-                <div className="cart-product-row">
+              {Items.map((item,i)=> (
+                <div key={i} className="cart-product-row">
                   <div className="cproduct-name">{item.name}</div>
                   <div className="cproduct-price">{item.price}</div>
                   <div className="cproduct-quantity">{item.count}</div>
@@ -40,7 +40,7 @@ const Cart = ({cartItems, handleRemoveItem}:any) => {
               ))}
             </div>
 
-          <div className="grandtotal">
+          <div className="grandtotal" data-test-id="grandtotal">
             <label>Grand Total</label>
             <div className="total">
               ${" "}
