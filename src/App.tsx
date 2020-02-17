@@ -5,10 +5,7 @@ import ProductList from './components/ProductList/ProductList';
 import {products} from './constants/index';
 debugger
 class App extends Component  {
-  constructor(props:any){
-    super(props);
-  }
-
+  
   state = {
     CartItems : []
   }

@@ -1,7 +1,6 @@
 import React from 'react'
 import Product from '../Product/Product'
 import './ProductList.scss'
-import { products } from '../../constants'
 
 const ProductList = (props:any) => {
     const {products,handleAddToCart} = props;
